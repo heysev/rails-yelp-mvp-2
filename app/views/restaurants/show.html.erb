@@ -1,0 +1,22 @@
+<%# Carte Restau %>
+<div class="container position-absolute top-20 start-50">
+  <div class="card w-25 shadow-sm mb-5 bg-body-tertiary col p-0 m-2 text-center" style="width: 18rem;">
+    <h2 class="card-title card-header p-0"> <%= @restaurant.name %> </h2>
+      <p class="card-text"> Adress : <%= @restaurant.address %> </p>
+      <p class="card-text"> Phone : <%= @restaurant.phone %> </p>
+      <p class="card-text"> Category : <%= @restaurant.category %> </p>
+  </div>
+</div>
+<%# Fin carte restau %>
+
+<%# Add review %>
+<div class="return position-absolute top-50 start-30 ms-5">
+  <%= link_to 'Add a review', restaurants_path, class: 'btn btn-outline-secondary' %>
+</div>
+<%# Fin add review %>
+
+<%# Retour %>
+<div class="return position-absolute top-50 start-50">
+  <%= link_to 'Retour à la liste des restaurants', restaurants_path, class: 'btn btn-outline-secondary' %>
+</div>
+<%# Fin retour %>
