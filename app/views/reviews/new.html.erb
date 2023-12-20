@@ -1,0 +1,19 @@
+Coucou new review
+<div class="container">
+  <div class="card shadow-sm bg-body-tertiary col p-3 m-2">
+    <h1 class=""> Nouvelle note </h1>
+    <%= form_for [ @restaurant, @review], url: { action: "create"}, html: { class: "row w-50 ms-4", id: "id-name"} do |f| %>
+      <div class="mb-3">
+        <%= f.label :rating %>
+        <%= f.number_field :rating, min: 0, max: 5, style: 'width: 500px;'%>
+      </div>
+      <div class="mb-3">
+        <%= f.label :content %>
+        <%= f.text_field :content, style: 'width: 500px; height: 100px' %>
+      </div>
+      <div class="mb-3">
+        <%= submit_tag 'Publish' %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="card shadow-sm bg-body-tertiary col p-3 m-2">
+    <h1 class=""> New restaurant</h1>
+    <%= form_for @restaurant, url: { action: "create"}, html: { class: "row w-50 ms-4", id: "id-name"} do |f| %>
+      <div class="mb-3">
+        <%= f.label :name %>
+        <%= f.text_field :name, style: 'width: 500px; height: 100px' %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :address %>
+        <%= f.text_field :address, style: 'width: 500px; height: 100px' %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :phone %>
+        <%= f.text_field :phone, style: 'width: 500px; height: 100px' %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :category %>
+        <%= f.text_field :category, style: 'width: 500px; height: 100px' %>
+      </div>
+      <div class="mb-3">
+        <%= submit_tag 'Publish' %>
+      </div>
+    <% end %>
+  </div>
+</div>
